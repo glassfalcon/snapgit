@@ -113,9 +113,9 @@ module Lolcommits
     if image[:width] > 640 || image[:height] > 480
       # this is ghetto resize-to-fill
       image.combine_options do |c|
-        c.resize '640x480^'
+        c.resize '480x480^'
         c.gravity 'center'
-        c.extent '640x480'
+        c.extent '480x480'
       end
       debug "Runner: writing resized image to #{snapshot_loc}"
       image.write snapshot_loc
