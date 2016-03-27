@@ -44,7 +44,7 @@ module Lolcommits
       url = `curl -I #{url}`.match(/location: (.*)/)[1].strip
 
       require 'gravatar-ultimate'
-      api = Gravatar.new(email, password: pass)
+      api = Gravatar.new(configuration['email'], password: configuration['password'])
       if api.exists? and api.addresses.count > 0
         handle = api.save_url!(0, url) # upload the image
 
@@ -118,7 +118,9 @@ module Lolcommits
     def configured?
       !configuration['enabled'].nil? &&
         configuration['access_token'] &&
-        configuration['secret']
+        configuration['secret'] &&
+        configuration['email'] &&
+        configuration['password']
     end
 
     def client
