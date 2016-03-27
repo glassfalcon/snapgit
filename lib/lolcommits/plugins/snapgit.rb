@@ -1,10 +1,9 @@
 # -*- encoding : utf-8 -*-
 require 'yaml'
 require 'oauth'
-require 'twitter'
 
 module Lolcommits
-  class Commitatar < Plugin
+  class Snapgit < Plugin
     TWITTER_API_ENDPOINT    = 'https://api.twitter.com'.freeze
     TWITTER_CONSUMER_KEY    = 'qc096dJJCxIiqDNUqEsqQ'.freeze
     TWITTER_CONSUMER_SECRET = 'rvjNdtwSr1H0TvBvjpk6c4bvrNydHmmbvv7gXZQI'.freeze
@@ -19,6 +18,8 @@ module Lolcommits
     end
 
     def upload_twitter
+      require 'twitter'
+
       attempts = 0
       begin
         attempts += 1
@@ -104,7 +105,7 @@ module Lolcommits
 
       puts ''
       puts '------------------------------'
-      puts 'Successfully set up commitatar'
+      puts 'Successfully set up snapgit'
       puts '------------------------------'
       {
         'access_token' => access_token.token,
@@ -148,7 +149,7 @@ module Lolcommits
     end
 
     def self.name
-      'commitatar'
+      'snapgit'
     end
 
     def self.runner_order
