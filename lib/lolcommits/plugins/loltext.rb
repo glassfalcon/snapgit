@@ -16,7 +16,6 @@ module Lolcommits
       debug 'Annotating image via MiniMagick'
       image = MiniMagick::Image.open(runner.main_image)
       annotate(image, :message, clean_msg(runner.message))
-      annotate(image, :sha, runner.sha)
       debug "Writing changed file to #{runner.main_image}"
       image.write runner.main_image
     end
