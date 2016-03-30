@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+# -*- encoding: utf-8 -*-
+
+$LOAD_PATH.push File.expand_path('../../lib', __FILE__)
+bin_path = File.join(File.expand_path("..", __FILE__), "lolcommits")
+
+# We basically only want to provide the `init` command
+if ARGV.first == "init"
+  require 'lolcommits/init'
+  Lolcommits::Init.run_setup(bin_path)
+else
+  # Wups, nothing we want to deal with, let's forward this to lolcommits
+  exec(bin_path)
+end

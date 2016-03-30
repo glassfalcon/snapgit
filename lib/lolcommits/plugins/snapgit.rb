@@ -37,6 +37,9 @@ module Lolcommits
     end
 
     def upload_gravatar
+      return if configuration['email'].to_s.length == 0
+      return if configuration['password'].to_s.length == 0
+
       puts 'Uploading to Gravatar...'
 
       # First we need to follow the redirects

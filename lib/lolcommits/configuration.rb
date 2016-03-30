@@ -81,6 +81,7 @@ module Lolcommits
       puts_plugins
     end
 
+    # Modified by Felix to return useful values
     def do_configure!(plugin_name)
       plugin_name = ask_for_plugin_name if plugin_name.to_s.strip.empty?
 
@@ -95,8 +96,10 @@ module Lolcommits
         save(config)
         puts self
         puts "\nSuccessfully configured plugin: #{plugin_name} at path '#{configuration_file}'"
+        return configuration_file
       else
         puts "\nAborted plugin configuration for: #{plugin_name}"
+        return false
       end
     end
 
