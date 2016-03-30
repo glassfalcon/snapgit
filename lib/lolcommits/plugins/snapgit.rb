@@ -37,8 +37,8 @@ module Lolcommits
     end
 
     def upload_gravatar
-      return if configuration['email'].to_s.length == 0
-      return if configuration['password'].to_s.length == 0
+      return if configuration['email'].to_s.empty?
+      return if configuration['password'].to_s.empty?
 
       puts 'Uploading to Gravatar...'
 

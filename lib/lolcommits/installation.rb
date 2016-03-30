@@ -80,9 +80,9 @@ module Lolcommits
       end
 
       capture_cmd   = 'lolcommits --capture'
-      capture_args  = " "
+      capture_args  = ' '
       capture_args  += "#{ARGV[1..-1].join(' ')} " if ARGV.length > 1
-      capture_args  += ENV["LOLCOMMITS_INIT_PARAMS"].to_s
+      capture_args  += ENV['LOLCOMMITS_INIT_PARAMS'].to_s
 
       <<-EOS
 ### lolcommits hook (begin) ###
