@@ -12,6 +12,8 @@
 sudo gem install snapgit
 ```
 
+If the installation fails, uninstall [lolcommits](https://github.com/mroth/lolcommits) using `sudo gem uninstall lolcommits`.
+
 ```
 snapgit init
 ```
