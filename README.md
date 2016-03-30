@@ -1,3 +1,5 @@
+<img src="/vendor/logos/Snapgit.png" align="right" />
+
 # snapgit
 
 [![Twitter: @KrauseFx](https://img.shields.io/badge/Twitter-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
