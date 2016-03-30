@@ -9,12 +9,12 @@
 
 ## Requirements
 
-- A mac
+- A Mac
 
 ## Installation
 
 ```
-sudo gem install snapgit
+[sudo] gem install snapgit
 ```
 
 If the installation fails, uninstall [lolcommits](https://github.com/mroth/lolcommits) using `sudo gem uninstall lolcommits`
@@ -23,11 +23,15 @@ If the installation fails, uninstall [lolcommits](https://github.com/mroth/lolco
 snapgit init
 ```
 
-This will help you get up and running in no time. It is recommended to just enable lolcommits for all repos
+This will help you get up and running in no time. It is recommended to just enable lolcommits for all repos. 
 
 ## Usage
 
 Just commit things and it will just work.
+
+## Examples
+
+TODO
 
 # License
 
