@@ -8,7 +8,7 @@ module Lolcommits
     def self.run_setup(lolcommits_binary)
       require 'io/console'
       @lolcommits_binary = lolcommits_binary
-      ENV["LOLCOMMITS_INIT_PARAMS"] = "--delay 1" # since that's required on the Mac
+      set_lolcommits_env_config
 
       puts "This setup will run through the necessary steps to get you up and running"
       puts "Please follow the wizard to authenticate Twitter and Gravatar"
@@ -48,6 +48,12 @@ module Lolcommits
           abort
         end
       end
+    end
+
+    def self.set_lolcommits_env_config
+      ENV["LOLCOMMITS_INIT_PARAMS"] = " --delay 1" # this is required to actually work on a Mac
+      ENV["LOLCOMMITS_INIT_PARAMS"] += " --stealth" # we don't want any output
+      ENV["LOLCOMMITS_INIT_PARAMS"] += " &" # this way the delay is not noticable
     end
 
     # @return (success or not)
