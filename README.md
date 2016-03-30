@@ -35,15 +35,18 @@ TODO
 <table>
 <tr>
 <td>
-<img src="https://twitter.com/fsha/profile_image?size=original" width=150 /><br />
+<a href="https://twitter.com/fsha">
+<img src="https://twitter.com/fsha/profile_image?size=original" width=150 /></a><br />
 <p align="center"><a href="https://twitter.com/fsha">@fsha</a><br />Design Lead</p>
 </td>
 <td>
-<img src="https://twitter.com/icofyre/profile_image?size=original" width=150 /><br />
+<a href="https://twitter.com/icofyre">
+<img src="https://twitter.com/icofyre/profile_image?size=original" width=150 /></a><br />
 <p align="center"><a href="https://twitter.com/icofyre">@icofyre</a><br />Web Intern</p>
 </td>
 <td>
-<img src="https://twitter.com/KrauseFx/profile_image?size=original" width=150 /><br />
+<a href="https://twitter.com/KrauseFx">
+<img src="https://twitter.com/KrauseFx/profile_image?size=original" width=150 /></a><br />
 <p align="center"><a href="https://twitter.com/KrauseFx">@KrauseFx</a><br />Engineering Lead</p>
 </td>
 </tr>
