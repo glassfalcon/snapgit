@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 module Lolcommits
   class Loltext < Plugin
-    DEFAULT_FONT_PATH = File.join(Configuration::LOLCOMMITS_ROOT, 'vendor', 'fonts', 'Impact.ttf')
+    DEFAULT_FONT_PATH = File.join(Configuration::LOLCOMMITS_ROOT, 'vendor', 'fonts', 'Lato.ttf')
     DEFAULT_LOGO_PATH = File.join(Configuration::LOLCOMMITS_ROOT, 'vendor', 'logos', 'Snapgit.png')
 
     def self.name
@@ -87,13 +87,6 @@ module Lolcommits
           :font     => DEFAULT_FONT_PATH,
           :size     => 48,
           :position => 'SW',
-          :color    => 'white',
-          :stroke_color => 'black'
-        },
-        :sha => {
-          :font     => DEFAULT_FONT_PATH,
-          :size     => 32,
-          :position => 'NE',
           :color    => 'white',
           :stroke_color => 'black'
         }
