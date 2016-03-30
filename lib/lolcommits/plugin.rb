@@ -47,8 +47,13 @@ module Lolcommits
     def configure_options!
       puts "Configuring plugin: #{self.class.name}\n"
       options.reduce({}) do |acc, option|
-        print "#{option}: "
-        val = parse_user_input(STDIN.gets.strip)
+        if option != 'enabled'
+          print "#{option}: "
+          val = parse_user_input(STDIN.gets.strip)
+        else
+          val = true
+        end
+
         # check enabled option isn't a String
         if (option == 'enabled') && ![true, false].include?(val)
           puts "Aborting - please respond with 'true' or 'false'"
