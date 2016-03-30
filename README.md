@@ -2,7 +2,21 @@
 
 [![Gem Version](https://badge.fury.io/rb/snapgit.svg)](https://rubygems.org/gems/snapgit)
 
-TODO
+## Requirements
+
+- A mac
+
+## Installation
+
+```
+sudo gem install snapgit
+```
+
+```
+snapgit init
+```
+
+This will help you get up and running in no time. It is recommended to just enable lolcommits for all repos
 
 # License
 
