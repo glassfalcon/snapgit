@@ -23,7 +23,7 @@ module Lolcommits
       attempts = 0
       begin
         attempts += 1
-        puts "Updating profile picture..."
+        puts 'Updating profile picture...'
         image = File.open(runner.main_image)
         client.update_profile_image(image)
         @twitter_user = client.user.screen_name # to be used with gravatar
@@ -37,7 +37,7 @@ module Lolcommits
     end
 
     def upload_gravatar
-      puts "Uploading to Gravatar..."
+      puts 'Uploading to Gravatar...'
 
       # First we need to follow the redirects
       url = "https://twitter.com/#{@twitter_user}/profile_image?size=original"
@@ -68,6 +68,8 @@ module Lolcommits
       options
     end
 
+    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable Metrics/AbcSize
     def configure_auth!
       puts '---------------------------'
       puts 'Need to grab twitter tokens'
@@ -114,6 +116,8 @@ module Lolcommits
         'password'     => gravatar_password
       }
     end
+    # rubocop:enable Metrics/MethodLength
+    # rubocop:enable Metrics/AbcSize
 
     def configured?
       !configuration['enabled'].nil? &&

@@ -42,8 +42,8 @@ module Lolcommits
 
       padding = 5
       left = image[:width] - @logo[:width] - padding
-      return image.composite(@logo, "png") do |c|
-        c.compose "Over"
+      image.composite(@logo, 'png') do |c|
+        c.compose 'Over'
         c.geometry "+#{left}+0"
       end
     end
