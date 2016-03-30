@@ -15,13 +15,17 @@
 sudo gem install snapgit
 ```
 
-If the installation fails, uninstall [lolcommits](https://github.com/mroth/lolcommits) using `sudo gem uninstall lolcommits`.
+If the installation fails, uninstall [lolcommits](https://github.com/mroth/lolcommits) using `sudo gem uninstall lolcommits`
 
 ```
 snapgit init
 ```
 
 This will help you get up and running in no time. It is recommended to just enable lolcommits for all repos
+
+## Usage
+
+Just commit things and it will just work.
 
 # License
 
