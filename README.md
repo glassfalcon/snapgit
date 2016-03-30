@@ -2,9 +2,6 @@
 
 # snapgit
 
-[![Twitter: @KrauseFx](https://img.shields.io/badge/Twitter-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
-[![Twitter: @icofyre](https://img.shields.io/badge/Twitter-@icofyre-blue.svg?style=flat)](https://twitter.com/icofyre)
-[![Twitter: @fsha](https://img.shields.io/badge/Twitter-@fsha-blue.svg?style=flat)](https://twitter.com/fsha)
 [![Gem Version](https://badge.fury.io/rb/snapgit.svg)](https://rubygems.org/gems/snapgit)
 
 ## Requirements
@@ -32,6 +29,25 @@ Just commit things and it will just work.
 ## Examples
 
 TODO
+
+## Authors
+
+<table>
+<tr>
+<td>
+<img src="https://twitter.com/fsha/profile_image?size=original" width=150 /><br />
+<p align="center"><a href="https://twitter.com/fsha">@fsha</a><br />Design Lead</p>
+</td>
+<td>
+<img src="https://twitter.com/icofyre/profile_image?size=original" width=150 /><br />
+<p align="center"><a href="https://twitter.com/icofyre">@icofyre</a><br />Web Intern</p>
+</td>
+<td>
+<img src="https://twitter.com/KrauseFx/profile_image?size=original" width=150 /><br />
+<p align="center"><a href="https://twitter.com/KrauseFx">@KrauseFx</a><br />Engineering Lead</p>
+</td>
+</tr>
+</table>
 
 # License
 
