@@ -1,8 +1,8 @@
 # snapgit
 
-[![Twitter: @KrauseFx](https://img.shields.io/badge/contact-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
-[![Twitter: @icofyre](https://img.shields.io/badge/contact-@icofyre-blue.svg?style=flat)](https://twitter.com/icofyre)
-[![Twitter: @fsha](https://img.shields.io/badge/contact-@fsha-blue.svg?style=flat)](https://twitter.com/fsha)
+[![Twitter: @KrauseFx](https://img.shields.io/badge/Twitter-@KrauseFx-blue.svg?style=flat)](https://twitter.com/KrauseFx)
+[![Twitter: @icofyre](https://img.shields.io/badge/Twitter-@icofyre-blue.svg?style=flat)](https://twitter.com/icofyre)
+[![Twitter: @fsha](https://img.shields.io/badge/Twitter-@fsha-blue.svg?style=flat)](https://twitter.com/fsha)
 [![Gem Version](https://badge.fury.io/rb/snapgit.svg)](https://rubygems.org/gems/snapgit)
 
 ## Requirements
