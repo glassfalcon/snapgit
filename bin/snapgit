@@ -10,5 +10,5 @@ if ARGV.first == "init"
   Lolcommits::Init.run_setup(bin_path)
 else
   # Wups, nothing we want to deal with, let's forward this to lolcommits
-  exec(bin_path)
+  exec("#{bin_path} #{ARGV.join(' ')}")
 end

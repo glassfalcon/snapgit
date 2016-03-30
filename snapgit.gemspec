@@ -3,19 +3,15 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'lolcommits/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'lolcommits'
+  s.name        = 'snapgit'
   s.version     = Lolcommits::VERSION
-  s.authors     = ['Matthew Rothenberg',    'Matt Hutchinson']
-  s.email       = ['mrothenberg@gmail.com', 'matt@hiddenloop.com']
-  s.homepage    = 'http://mroth.github.com/lolcommits/'
+  s.authors     = ['Patrick Camacho', 'Manning Fisher', 'Felix Krause', 'Matthew Rothenberg', 'Matt Hutchinson']
+  s.email       = ['patrick@snapgit.com', 'felix@snapgit.com', 'fisher@snapgit.com', 'mrothenberg@gmail.com', 'matt@hiddenloop.com']
+  s.homepage    = 'https://snapgit.com/'
   s.license     = 'LGPL-3'
-  s.summary     = 'Capture webcam image on git commit for lulz.'
+  s.summary     = Lolcommits::DESCRIPTION
 
-  s.description = <<-EOF
-  lolcommits takes a snapshot with your webcam every time you git commit code,
-  and archives a lolcat style image with it. It's selfies for software
-  developers. `git blame` has never been so much fun.
-  EOF
+  s.description = Lolcommits::DESCRIPTION
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
@@ -50,7 +46,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('json', '~> 1.8.1')           # lolsrv
   s.add_runtime_dependency('httmultiparty', '~> 0.3.16') # dot_com
   s.add_runtime_dependency('tumblr_client', '~> 0.8.5')  # tumblr
-  s.add_runtime_dependency('gravatar-ultimate')          # snapgit
 
   # development gems
   s.add_development_dependency('fivemat', '~> 1.3.1')
