@@ -81,7 +81,10 @@ module Lolcommits
 
         # Copy the config.yml to the ~/.lolcommits/[project] folder
         to_path = Lolcommits::Configuration.new.loldir # this will use the current dir by default
-        FileUtils.cp(@config_path, to_path)
+        begin
+          FileUtils.cp(@config_path, to_path)
+        rescue ArgumentError # if the file is the same
+        end
       end
     end
 
