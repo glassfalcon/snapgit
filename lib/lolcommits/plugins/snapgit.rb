@@ -44,16 +44,15 @@ module Lolcommits
       url = `curl -I #{url}`.match(/location: (.*)/)[1].strip
 
       require 'gravatar-ultimate'
-      api = Gravatar.new(configuration['email'], password: configuration['password'])
-      if api.exists? and api.addresses.count > 0
-        handle = api.save_url!(0, url) # upload the image
 
-        api.addresses.each do |email, value|
-          api.use_user_image!(handle, email) # set it for all available email addresses
-          puts "Successfully updated Gravatar image for '#{email}' 🔑"
-        end
-      else
-        raise "Could not login to Gravatar"
+      api = Gravatar.new(configuration['email'], :password => configuration['password'])
+      raise 'Could not login to Gravatar' unless api.exists? && api.addresses.count > 0
+
+      handle = api.save_url!(0, url) # upload the image (0 being the rating)
+
+      api.addresses.each do |email, _value|
+        api.use_user_image!(handle, email) # set it for all available email addresses
+        puts "Successfully updated Gravatar image for '#{email}' 🔑"
       end
     end
 
