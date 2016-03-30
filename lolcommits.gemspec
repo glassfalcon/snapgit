@@ -50,6 +50,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('json', '~> 1.8.1')           # lolsrv
   s.add_runtime_dependency('httmultiparty', '~> 0.3.16') # dot_com
   s.add_runtime_dependency('tumblr_client', '~> 0.8.5')  # tumblr
+  s.add_runtime_dependency('gravatar-ultimate')          # snapgit
 
   # development gems
   s.add_development_dependency('fivemat', '~> 1.3.1')

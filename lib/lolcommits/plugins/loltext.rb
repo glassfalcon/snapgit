@@ -2,6 +2,7 @@
 module Lolcommits
   class Loltext < Plugin
     DEFAULT_FONT_PATH = File.join(Configuration::LOLCOMMITS_ROOT, 'vendor', 'fonts', 'Impact.ttf')
+    DEFAULT_LOGO_PATH = File.join(Configuration::LOLCOMMITS_ROOT, 'vendor', 'logos', 'Snapgit.png')
 
     def self.name
       'loltext'
@@ -16,7 +17,7 @@ module Lolcommits
       debug 'Annotating image via MiniMagick'
       image = MiniMagick::Image.open(runner.main_image)
       annotate(image, :message, clean_msg(runner.message))
-      annotate(image, :sha, runner.sha)
+      image = add_logo(image, DEFAULT_LOGO_PATH)
       debug "Writing changed file to #{runner.main_image}"
       image.write runner.main_image
     end
@@ -33,6 +34,17 @@ module Lolcommits
         c.pointsize runner.animate? ? 24 : config_option(type, :size)
         c.font config_option(type, :font)
         c.annotate '0', string
+      end
+    end
+
+    def add_logo(image, logo_path)
+      @logo = MiniMagick::Image.open(logo_path)
+
+      padding = 5
+      left = image[:width] - @logo[:width] - padding
+      image.composite(@logo, 'png') do |c|
+        c.compose 'Over'
+        c.geometry "+#{left}+0"
       end
     end
 
@@ -134,7 +146,7 @@ module Lolcommits
 
     # convenience method for word wrapping
     # based on https://github.com/cmdrkeene/memegen/blob/master/lib/meme_generator.rb
-    def word_wrap(text, col = 27)
+    def word_wrap(text, col = 20)
       wrapped = text.gsub(/(.{1,#{col + 4}})(\s+|\Z)/, "\\1\n")
       wrapped.chomp!
     end
