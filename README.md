@@ -46,7 +46,7 @@ TODO
 </td>
 <td>
 <a href="https://twitter.com/KrauseFx">
-<img src="https://twitter.com/KrauseFx/profile_image?size=original" width=150 /></a><br />
+<img src="https://twitter.com/SeriousKrauseFx/profile_image?size=original" width=150 /></a><br />
 <p align="center"><a href="https://twitter.com/KrauseFx">@KrauseFx</a><br />Engineering Lead</p>
 </td>
 </tr>
