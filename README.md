@@ -37,17 +37,17 @@ TODO
 <td>
 <a href="https://twitter.com/fsha">
 <img src="https://twitter.com/fsha/profile_image?size=original" width=150 /></a><br />
-<p align="center"><a href="https://twitter.com/fsha">@fsha</a><br />Design Lead</p>
+<p align="center"><a href="https://twitter.com/fsha">@fsha</a><br />Designer</p>
 </td>
 <td>
 <a href="https://twitter.com/icofyre">
 <img src="https://twitter.com/icofyre/profile_image?size=original" width=150 /></a><br />
-<p align="center"><a href="https://twitter.com/icofyre">@icofyre</a><br />Web Intern</p>
+<p align="center"><a href="https://twitter.com/icofyre">@icofyre</a><br />Engineer</p>
 </td>
 <td>
 <a href="https://twitter.com/KrauseFx">
 <img src="https://twitter.com/SeriousKrauseFx/profile_image?size=original" width=150 /></a><br />
-<p align="center"><a href="https://twitter.com/KrauseFx">@KrauseFx</a><br />Engineering Lead</p>
+<p align="center"><a href="https://twitter.com/KrauseFx">@KrauseFx</a><br />Engineer</p>
 </td>
 </tr>
 </table>
