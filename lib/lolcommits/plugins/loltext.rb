@@ -10,6 +10,10 @@ module Lolcommits
 
     # enabled by default (if no configuration exists)
     def enabled?
+      # Added by Felix
+      # we have to access the configuration for the snapgit plugin here
+      config = runner.config.read_configuration if runner
+      return false unless config["snapgit"]["show_commit_messages"]
       !configured? || super
     end
 
