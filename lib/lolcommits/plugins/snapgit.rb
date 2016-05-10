@@ -107,6 +107,9 @@ module Lolcommits
       print "\n4) Your Gravatar password: "
       gravatar_password = STDIN.gets.strip.downcase.to_s
 
+      print "\n5) Do you want to show the commit message on the picture? This is recommended for open source projects (y/n) "
+      show_commit_messages = (STDIN.gets.strip == "y")
+
       puts ''
       puts '------------------------------'
       puts 'Successfully set up snapgit'
@@ -115,7 +118,8 @@ module Lolcommits
         'access_token' => access_token.token,
         'secret'       => access_token.secret,
         'email'        => gravatar_email,
-        'password'     => gravatar_password
+        'password'     => gravatar_password,
+        'show_commit_messages' => show_commit_messages
       }
     end
     # rubocop:enable Metrics/MethodLength
@@ -125,6 +129,7 @@ module Lolcommits
       !configuration['enabled'].nil? &&
         configuration['access_token'] &&
         configuration['secret'] &&
+        # configuration['show_commit_messages'] && # we don't do that, since it might be false
         configuration['email'] &&
         configuration['password']
     end
